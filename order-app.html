@@ -290,10 +290,10 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
       <div class="tip-label">Add a Tip</div>
       <div class="tip-btns">
         <button class="tip-btn active" id="tip-0" onclick="setTip(0)">No Tip</button>
-        <button class="tip-btn" id="tip-1" onclick="setTip(1)">$1</button>
-        <button class="tip-btn" id="tip-2" onclick="setTip(2)">$2</button>
         <button class="tip-btn" id="tip-5" onclick="setTip(5)">$5</button>
-        <button class="tip-btn" id="tip-custom" onclick="setTip(&#39;custom&#39;)">Custom</button>
+        <button class="tip-btn" id="tip-10" onclick="setTip(10)">$10</button>
+        <button class="tip-btn" id="tip-20" onclick="setTip(20)">$20</button>
+        <button class="tip-btn" id="tip-custom" onclick="setTip('custom')">Custom</button>
       </div>
       <div id="tip-custom-wrap" style="display:none;margin-bottom:10px;">
         <input class="form-input" id="tip-custom-val" type="number" min="0" step="0.01" placeholder="Enter tip amount" oninput="updateCustomTip()">
