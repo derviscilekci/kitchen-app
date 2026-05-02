@@ -2,7 +2,13 @@
 <html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Order App</title>
+<title>MOC Event</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#f5a623">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="MOC Event">
+<link rel="apple-touch-icon" href="https://via.placeholder.com/192x192/f5a623/000000?text=MOC">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
 :root{--bg:#0a0a0a;--surface:#141414;--surface2:#1e1e1e;--border:#2a2a2a;--accent:#f5a623;--accent2:#e8501a;--green:#22c55e;--red:#ef4444;--blue:#3b82f6;--text:#f0f0f0;--muted:#666;}
@@ -1059,6 +1065,8 @@ function showScreen(name,tab){
 }
 
 function updateClock(){const n=new Date();document.getElementById('clock').textContent=n.toLocaleTimeString('en-US',{hour:'2-digit',minute:'2-digit'});}
+
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}
 
 init();
 </script>
